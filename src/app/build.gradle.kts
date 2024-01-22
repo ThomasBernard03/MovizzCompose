@@ -79,4 +79,10 @@ dependencies {
 
     // Coil
     implementation(libs.coil.compose)
+
+    // Retrofit for API calls
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp) // To create requests interceptors
+    implementation(libs.logging.interceptor) // Logging interceptor
 }
