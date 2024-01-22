@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Movizz</string>
+
+
+    <!-- Home -->
+    <string name="trending_movies">Films en tendance</string>
 </resources>

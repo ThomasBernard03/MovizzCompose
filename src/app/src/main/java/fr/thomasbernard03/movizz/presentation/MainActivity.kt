@@ -1,4 +1,4 @@
-package fr.thomasbernard03.movizz
+package fr.thomasbernard03.movizz.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import fr.thomasbernard03.movizz.ui.theme.MovizzTheme
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import fr.thomasbernard03.movizz.presentation.home.HomeScreen
+import fr.thomasbernard03.movizz.presentation.home.HomeViewModel
+import fr.thomasbernard03.movizz.presentation.theme.MovizzTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +28,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    val navController = rememberNavController()
+
+                    NavHost(navController = navController, startDestination = "home"){
+                        composable("home"){
+                            val viewModel : HomeViewModel = viewModel()
+                            HomeScreen(viewModel = viewModel)
+                        }
+                    }
                 }
             }
         }

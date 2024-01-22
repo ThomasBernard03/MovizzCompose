@@ -1,4 +1,4 @@
-package fr.thomasbernard03.movizz.ui.theme
+package fr.thomasbernard03.movizz.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

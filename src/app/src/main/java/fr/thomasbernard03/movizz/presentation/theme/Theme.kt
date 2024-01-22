@@ -1,4 +1,4 @@
-package fr.thomasbernard03.movizz.ui.theme
+package fr.thomasbernard03.movizz.presentation.theme
 
 import android.app.Activity
 import android.os.Build
